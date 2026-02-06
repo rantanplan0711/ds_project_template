@@ -8,7 +8,7 @@ from pathlib import Path
 
 # Cookiecutter variables
 PROJECT_SLUG = "{{ cookiecutter.project_slug }}"
-PYTHON_VERSION = "{{ cookiecutter.python_version }}"
+PYTHON_VERSION = "3.12"
 
 PROJECT_DIR = Path.cwd()
 
