@@ -1,6 +1,6 @@
 [project]
 name = "{{cookiecutter.pypi_package_name}}"
-description = "{{ cookiecutter.project_short_description | replace('\\', '\\\\') | replace('\"', '\\\"') }}"
+description = ""
 readme = "README.md"
 authors = [
   {name = "{{ cookiecutter.full_name | replace('\\', '\\\\') | replace('\"', '\\\"') }}", email = "{{cookiecutter.email}}"}
