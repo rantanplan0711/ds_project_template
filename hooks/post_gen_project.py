@@ -52,6 +52,24 @@ def main():
     print(f"🚀 Initialisiere Projekt: {PROJECT_SLUG}")
     print("="*50 + "\n")
 
+    # 0. Add folder structure
+    # Ordner erstellen
+    directories = [
+        "data/01_raw",
+        "data/02_preprocess", 
+        "data/03_final",
+        "notebooks",
+        "scripts",
+        "models",
+    ]
+
+    for dir_path in directories:
+        path = Path(dir_path)
+        path.mkdir(parents=True, exist_ok=True)
+        # .gitkeep für leere Ordner
+        (path / ".gitkeep").touch()
+
+    print("✓ Projektstruktur erstellt")
     # 1. UV Check
     if not check_uv_installed():
         print("⚠️  UV nicht gefunden!")
