@@ -59,8 +59,6 @@ def main():
         "data/02_preprocess", 
         "data/03_final",
         "notebooks",
-        "scripts",
-        "models",
     ]
 
     for dir_path in directories:
