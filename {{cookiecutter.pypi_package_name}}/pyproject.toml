@@ -1,5 +1,6 @@
 [project]
 name = "{{cookiecutter.pypi_package_name}}"
+version = "0.1.0"
 description = ""
 readme = "README.md"
 authors = [
@@ -8,12 +9,23 @@ authors = [
 requires-python = ">= 3.12"
 
 dependencies = [
-  "pre-commit",
-  "ruff",
   "pandas",
-  "jupyter"
 ]
 
+[project.optional-dependencies]
+dev = [
+  "pre-commit",
+  "ruff",
+  "pytest",
+]
+notebooks = [
+  "jupyter",
+  "ipykernel",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.ruff]
 line-length = 120
