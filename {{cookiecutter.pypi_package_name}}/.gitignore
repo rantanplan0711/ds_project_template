@@ -1,0 +1,23 @@
+# Data
+data/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+venv/
+
+# PyCharm
+.idea/
+.vscode/
+
+# Ruff stuff:
+.ruff_cache/

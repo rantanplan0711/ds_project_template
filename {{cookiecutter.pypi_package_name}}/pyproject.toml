@@ -1,0 +1,30 @@
+[project]
+name = "{{cookiecutter.pypi_package_name}}"
+description = "{{ cookiecutter.project_short_description | replace('\\', '\\\\') | replace('\"', '\\\"') }}"
+readme = "README.md"
+authors = [
+  {name = "{{ cookiecutter.full_name | replace('\\', '\\\\') | replace('\"', '\\\"') }}", email = "{{cookiecutter.email}}"}
+]
+requires-python = ">= 3.12"
+
+dependencies = [
+  "pre-commit",
+  "ruff",
+  "pandas",
+  "jupyter"
+]
+
+
+[tool.ruff]
+line-length = 120
+include = ["*.py"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+]
